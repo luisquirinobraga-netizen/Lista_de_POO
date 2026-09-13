@@ -32,6 +32,7 @@ void main () {
 ## Questão - 06
 
 ### Erros Identificados no Código:
+
 - Assinatura do main incorreta: String args deveria ser um array "String[] args" ou "String... args";
 - Falta de incremento no while: A variável contador nunca é incrementada, o que geraria um loop infinito se a condição fosse atendida;
 - Falta de ponto e vírgula: A linha final do System.out.println estava sem o ponto e vírgula.

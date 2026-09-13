@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Exercicio04 {
+public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int[] numeros = new int[5];
@@ -8,11 +8,12 @@ public class Exercicio04 {
         for (int i = 0; i < 5; i++) {
             System.out.print("Digite o " + (i + 1) + "º número (entre 1 e 30): ");
             int num = sc.nextInt();
+            
             if (num >= 1 && num <= 30) {
                 numeros[i] = num;
             } else {
-                System.out.println("Número inválido! Tente novamente.");
-                i--;
+                System.out.println("Número inválido! Digite um valor entre 1 e 30.");
+                i--; // Decrementa o contador para repetir a leitura desta posição
             }
         }
 
@@ -21,7 +22,7 @@ public class Exercicio04 {
             for (int j = 0; j < num; j++) {
                 System.out.print("*");
             }
-            System.out.println();
+            System.out.println(); // Pula para a próxima linha após imprimir os asteriscos do número
         }
 
         sc.close();

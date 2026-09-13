@@ -1,6 +1,6 @@
 # Lista de Exercícios 01 - POO
 
-## Q5
+## Questão - 05
 
 ### Como o Scanner é utilizado para entrada de dados em Java?
 
@@ -8,34 +8,32 @@ O Scanner é utilizado para receber dados digitados pelo usuário durante a exec
 
 import java.util.Scanner;
 
-public class Main {
-    public static void main(String[] args) {
+void main () {
 
-        Scanner scanner = new Scanner(System.in);
+    Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Digite um número:");
-        double numero = scanner.nextDouble();
+    System.out.println("Digite um número:");
+    double numero = scanner.nextDouble();
 
-        System.out.println("Você digitou: " + numero);
+    System.out.println("Você digitou: " + numero);
 
-        scanner.close();
-    }
+    scanner.close();
+
 }
 
 ### Como o System.out.printf pode ser útil?
 
 O "System.out.printf" permite formatar a saída do programa. Por exemplo, podemos utilizar "%.2f" para exibir um número do tipo "double" com duas casas decimais. Exemplo: "double numero = 10.5;"; "System.out.printf("Número: %.2f%n", numero);". A saída será: "Número: 10.50". Ex.:
 
-public class Main {
-    public static void main(String[] args) {
+void main () {
 
         double numero = 10.56789;
 
         System.out.printf("Número: %.2f%n", numero);
-    }
+    
 }
 
-## Q6
+## Questão - 06
 
 ### Erros Identificados no Código:
 - Assinatura do main incorreta: String args deveria ser um array String[] args ou String... args.
@@ -47,16 +45,16 @@ public class Main {
 
 import java.util.Scanner;
 
-public class Contador {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int contador = 0;
+void main () {
+
+    Scanner scanner = new Scanner(System.in);
+    int contador = 0;
         
-        while (contador <= 5) {
-            System.out.println("Contador: " + contador);
-            contador++; // Incremento para evitar loop infinito
-        }
-        
-        sc.close();
+    while (contador <= 5) {
+        System.out.println("Contador: " + contador);
+        contador++; // Incremento para evitar loop infinito
     }
+        
+    scanner.close();
+
 }

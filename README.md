@@ -10,16 +10,11 @@ O Scanner é utilizado para receber dados digitados pelo usuário durante a exec
 import java.util.Scanner;
 
 void main () {
-
     Scanner scanner = new Scanner(System.in);
-
     System.out.println("Digite um número:");
     double numero = scanner.nextDouble();
-
     System.out.println("Você digitou: " + numero);
-
     scanner.close();
-
 }
 ```
 
@@ -29,38 +24,33 @@ O "System.out.printf" permite formatar a saída do programa. Por exemplo, podemo
 
 ```java
 void main () {
-
         double numero = 10.56789;
-
         System.out.printf("Número: %.2f%n", numero);
-    
 }
 ```
 
 ## Questão - 06
 
 ### Erros Identificados no Código:
-- Assinatura do main incorreta: String args deveria ser um array String[] args ou String... args.
-- Falta de incremento no while: A variável contador nunca é incrementada, o que geraria um loop infinito se a condição fosse atendida.
-- Escopo do bloco while vazio: As chaves do while estavam vazias e o bloco de impressão (System.out.println) estava posicionado incorretamente fora do escopo ou com erro de sintaxe.
-- Falta de ponto e vírgula: A linha final do System.out.println estava sem o ponto e vírgula ;.
+- Assinatura do main incorreta: String args deveria ser um array "String[] args" ou "String... args";
+- Falta de incremento no while: A variável contador nunca é incrementada, o que geraria um loop infinito se a condição fosse atendida;
+- Falta de ponto e vírgula: A linha final do System.out.println estava sem o ponto e vírgula.
 
 ### Código Corrigido:
 
 ```java
 import java.util.Scanner;
 
-void main () {
+public class Contador {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int contador = 0;
 
-    Scanner scanner = new Scanner(System.in);
-    int contador = 0;
-        
-    while (contador <= 5) {
-        System.out.println("Contador: " + contador);
-        contador++; // Incremento para evitar loop infinito
+        while (contador <= 5) {
+            System.out.println("Contador: " + contador);
+            contador++; // Incremento para evitar loop infinito
+        }
+        scanner.close();
     }
-        
-    scanner.close();
-
 }
 ```

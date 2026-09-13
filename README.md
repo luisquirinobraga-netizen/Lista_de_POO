@@ -6,7 +6,6 @@
 
 O Scanner é utilizado para receber dados digitados pelo usuário durante a execução do programa. Para utilizar o Scanner, primeiro precisamos importar a classe: "import java.util.Scanner;". Depois, criamos um objeto Scanner: "Scanner scanner = new Scanner(System.in);". Para usar esse scanner, para ler diferentes tipos, deve-se especificar o seu tipo e, caso necessário, limpar o buffer por meio de um scan "preventivo". Ex.:
 
-"
 import java.util.Scanner;
 
 public class Main {
@@ -22,13 +21,11 @@ public class Main {
         scanner.close();
     }
 }
-"
 
 ### Como o System.out.printf pode ser útil?
 
 O "System.out.printf" permite formatar a saída do programa. Por exemplo, podemos utilizar "%.2f" para exibir um número do tipo "double" com duas casas decimais. Exemplo: "double numero = 10.5;"; "System.out.printf("Número: %.2f%n", numero);". A saída será: "Número: 10.50". Ex.:
 
-"
 public class Main {
     public static void main(String[] args) {
 
@@ -37,7 +34,6 @@ public class Main {
         System.out.printf("Número: %.2f%n", numero);
     }
 }
-"\
 
 ## Q6
 
@@ -48,6 +44,7 @@ public class Main {
 - Falta de ponto e vírgula: A linha final do System.out.println estava sem o ponto e vírgula ;.
 
 ### Código Corrigido:
+
 import java.util.Scanner;
 
 public class Contador {

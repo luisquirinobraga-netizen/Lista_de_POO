@@ -1,5 +1,7 @@
 # Lista de Exercícios 01 - POO
 
+Repositório destinado à resolução da lista de exercícios da disciplina de Programação Orientada a Objetos do curso de **Análise e Desenvolvimento de Sistemas (ADS)** do **Instituto Federal da Paraíba (IFPB) - Campus Cajazeiras**.
+
 ## Questão - 05
 
 ### Como o Scanner é utilizado para entrada de dados em Java?

@@ -1,5 +1,7 @@
 # Lista de Exercícios 02 - POO
 
+Repositório destinado à resolução da lista de exercícios da disciplina de Programação Orientada a Objetos do curso de **Análise e Desenvolvimento de Sistemas (ADS)** do **Instituto Federal da Paraíba (IFPB) - Campus Cajazeiras**.
+
 ## Questão - 01
 
 ### Explique por que é considerado boa prática usar getters e setters em vez de tornar os atributos públicos em uma classe. Dê um exemplo onde usar um setter permite controlar melhor a integridade dos dados de um objeto.

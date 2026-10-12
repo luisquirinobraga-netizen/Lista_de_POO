@@ -10,4 +10,4 @@ Este repositório contém as implementações das questões propostas na lista d
 
 1. Clone este repositório ou baixe os arquivos em formato ZIP:
 ```bash
-git clone [https://github.com/luisquirinobraga-netizen/Lista_de_POO.git](https://github.com/luisquirinobraga-netizen/Lista_de_POO.git)
+git clone https://github.com/luisquirinobraga-netizen/Lista_de_POO.git

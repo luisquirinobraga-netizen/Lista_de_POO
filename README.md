@@ -8,7 +8,7 @@ Repositório destinado à resolução da lista de exercícios da disciplina de P
 
 #### a) Os construtores de superclasse não são herdados por subclasses.
 
-Verdadeiro. Construtores não são membros herdados (como métodos e atributos comuns). As subclasses precisam declarar seus próprios construtores, embora possam invocar o construtor da superclasse usando a palavra-chave super().
+Verdadeiro. Construtores não são membros herdados (como métodos e atributos comuns). As subclasses precisam declarar seus próprios construtores, embora possam invocar o construtor da superclasse usando a palavra-chave "super()".
 
 #### b) Um relacionamento tem um é implementado via herança.
 

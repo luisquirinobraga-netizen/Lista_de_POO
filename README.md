@@ -24,12 +24,12 @@ Falso. Quando um método é redefinido com a mesma assinatura na subclasse, cham
 
 #### Acesso private (Maior Encapsulamento):
 
-- Mérito: Protege totalmente o estado interno da superclasse. Os atributos ficam restritos à própria classe, forçando as subclasses a acessá-los ou modificá-los apenas por meio de métodos públicos (getters e setters). Isso garante que se você mudar a implementação interna da superclasse, as subclasses não quebrarão, mantendo o encapsulamento intacto;
+- Mérito: Protege totalmente o estado interno da superclasse. Os atributos ficam restritos à própria classe, forçando as subclasses a acessá-los ou modificá-los apenas por meio de métodos públicos (getters e setters). Isso garante que se você mudar a implementação interna da superclasse, as subclasses não quebrarão, mantendo o encapsulamento intacto.
 
 #### Acesso protected (Acessibilidade Estendida):
 
 - Vantagem: Permite que as subclasses acessem diretamente os membros da superclasse sem precisar de métodos intermediários, o que pode simplificar o código em hierarquias complexas;
-- Desvantagem (Por que alguns evitam): Quebra parcialmente o encapsulamento. Qualquer subclasse (e até classes no mesmo pacote) pode manipular diretamente os campos da superclasse, criando um forte acoplamento. Se a superclasse mudar um atributo protected, todas as subclasses que o utilizam diretamente podem apresentar falhas;
+- Desvantagem (Por que alguns evitam): Quebra parcialmente o encapsulamento. Qualquer subclasse (e até classes no mesmo pacote) pode manipular diretamente os campos da superclasse, criando um forte acoplamento. Se a superclasse mudar um atributo protected, todas as subclasses que o utilizam diretamente podem apresentar falhas.
 
 ## Questão - 03
 

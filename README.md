@@ -1,38 +1,15 @@
-# Lista de Exercícios 04 - POO
+# Lista de Exercícios 05 - POO
 
 Repositório destinado à resolução da lista de exercícios da disciplina de Programação Orientada a Objetos do curso de **Análise e Desenvolvimento de Sistemas (ADS)** do **Instituto Federal da Paraíba (IFPB) - Campus Cajazeiras**.
 
 ## Questão - 01
 
-### Determine se cada uma das seguintes afirmações é verdadeira ou falsa. Se uma instrução for falsa, explique por quê.
+### A partir de qual versão do Java foi possível implementar métodos com corpo (default ou static) nas interfaces? Qual é a utilidade de métodos default e static dentro de interfaces?
 
-#### a) Os construtores de superclasse não são herdados por subclasses.
-
-Verdadeiro. Construtores não são membros herdados (como métodos e atributos comuns). As subclasses precisam declarar seus próprios construtores, embora possam invocar o construtor da superclasse usando a palavra-chave "super()".
-
-#### b) Um relacionamento tem um é implementado via herança.
-
-Falso. O relacionamento "tem um" (ex: um carro tem um motor) é implementado via composição ou agregação (onde uma classe possui um atributo que é uma instância de outra classe). O que é implementado via herança é o relacionamento "é um" (ex: um carro é um veículo).
-
-#### c) Quando uma subclasse redefinir um método de superclasse utilizando a mesma assinatura, diz-se que a subclasse sobrecarrega esse método de superclasse.
-
-Falso. Quando um método é redefinido com a mesma assinatura na subclasse, chama-se sobrescrita (override). A sobrecarga (overload) ocorre quando você cria vários métodos com o mesmo nome, mas com assinaturas diferentes (parâmetros diferentes) dentro da mesma classe.
+A partir do Java 8 (lançado em 2014) passou a ser permitido criar métodos com corpo dentro das interfaces, utilizando as palavras-chave default ou static. Permitem adicionar novos métodos a uma interface existente sem quebrar as classes que já a implementam (elas herdam o comportamento padrão automaticamente), e, também, evitam duplicação de código, quando várias classes implementam a mesma lógica básica, permitindo sobrescrevê-la apenas quando necessário.
 
 ## Questão - 02
 
-### Alguns programadores preferem não utilizar acesso protected, porque acreditam que ele quebra o encapsulamento da superclasse. Discuta os méritos relativos de usar acesso protected versus acesso private em superclasses.
+### Explique como as interfaces ajudam na construção de sistemas desacoplados e de fácil manutenção. Dê um exemplo prático de um cenário no desenvolvimento de software onde o uso de interfaces é preferível ao uso direto de classes concretas.
 
-#### Acesso private (Maior Encapsulamento):
-
-- Mérito: Protege totalmente o estado interno da superclasse. Os atributos ficam restritos à própria classe, forçando as subclasses a acessá-los ou modificá-los apenas por meio de métodos públicos (getters e setters). Isso garante que se você mudar a implementação interna da superclasse, as subclasses não quebrarão, mantendo o encapsulamento intacto.
-
-#### Acesso protected (Acessibilidade Estendida):
-
-- Vantagem: Permite que as subclasses acessem diretamente os membros da superclasse sem precisar de métodos intermediários, o que pode simplificar o código em hierarquias complexas;
-- Desvantagem (Por que alguns evitam): Quebra parcialmente o encapsulamento. Qualquer subclasse (e até classes no mesmo pacote) pode manipular diretamente os campos da superclasse, criando um forte acoplamento. Se a superclasse mudar um atributo protected, todas as subclasses que o utilizam diretamente podem apresentar falhas.
-
-## Questão - 03
-
-### Explique como funciona a chamada de construtores em hierarquias de herança. Por que é obrigatório que o construtor da superclasse seja chamado explicitamente ou implicitamente?
-
-Quando você cria um objeto de uma subclasse, o Java precisa garantir, estruturalmente, que toda a cadeia de herança seja construída de cima para baixo. Desse modo, o construtor da superclasse é executado sempre antes do construtor da subclasse. Como a superclasse é responsável por inicializar seu próprio estado — incluindo atributos e regras de negócio essenciais —, a ausência dessa chamada resultaria em uma subclasse com um objeto base corrompido, parcialmente inicializado ou em estado inválido, o que geraria comportamentos imprevisíveis.
+As interfaces definem um contrato de o que deve ser feito, sem ditar como será feito. Isso promove o baixo acoplamento, pois as classes principais dependem de abstrações (interfaces) e não de implementações concretas. Se a implementação mudar no futuro, o restante do sistema permanece intacto, facilitando a manutenção e os testes (como a criação de mocks). Imagine que você está criando um sistema que precisa enviar um aviso para o usuário. Se o seu código for escrito conversando diretamente com o sistema de uma empresa específica de cartão de crédito, caso essa empresa mude as regras ou aumente muito as taxas, você terá que reescrever grande parte do código da loja para aceitar outro serviço. Contudo, por meio de uma interface, é possível criar uma interface de "Meio de Pagamento" que define apenas a regra geral: "todo meio de pagamento precisa saber cobrar um valor". O sistema principal da loja passa a conversar apenas com essa interface, sem se importar se por trás está rodando Pix, Boleto ou Cartão de Crédito.

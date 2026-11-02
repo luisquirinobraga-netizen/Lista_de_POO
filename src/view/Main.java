@@ -3,17 +3,17 @@ import model.*;
 void main() {
     Smartphone smartphone = new Smartphone();
 
-    // Implementação de "AparelhoTelefonico"
+    // Testando a implementação de "AparelhoTelefonico"
     smartphone.ligar("+55 83 99180-2140");
     smartphone.atender();
-    // Implementação de "NavegadorInternet"
+    // Testando a implementação de "NavegadorInternet"
     smartphone.exibirPagina("https://youtu.be/dQw4w9WgXcQ?si=KxdYEqiPubrajq9j");
     smartphone.adicionarNovaAba();
-    // Implementação de "ReprodutorMusical"
+    // Testando a implementação de "ReprodutorMusical"
     smartphone.tocar();
     smartphone.pausar();
 
-    // Implementação de "OperacaoMatematica" usando Lambda
+    // Testando a implementação de "OperacaoMatematica" usando Lambda
     OperacaoMatematica soma = (a,b) -> a+b;
     OperacaoMatematica subtracao = (a,b) -> a-b;
     OperacaoMatematica multiplicacao = (a,b) -> a*b;
@@ -25,7 +25,7 @@ void main() {
         return a/b;
     };
 
-    // Implementação de "RelatorioFinanceiro" e "Contrato" usando instaceof
+    // Testando a implementação de "RelatorioFinanceiro" e "Contrato" usando instanceof
     Object[] documentos = {
             new RelatorioFinanceiro(),
             new Contrato()

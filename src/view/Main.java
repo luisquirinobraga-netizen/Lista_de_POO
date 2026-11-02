@@ -6,9 +6,11 @@ void main() {
     // Testando a implementação de "AparelhoTelefonico"
     smartphone.ligar("+55 83 99180-2140");
     smartphone.atender();
+    
     // Testando a implementação de "NavegadorInternet"
     smartphone.exibirPagina("https://youtu.be/dQw4w9WgXcQ?si=KxdYEqiPubrajq9j");
     smartphone.adicionarNovaAba();
+    
     // Testando a implementação de "ReprodutorMusical"
     smartphone.tocar();
     smartphone.pausar();
